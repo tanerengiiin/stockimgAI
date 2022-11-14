@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Footer from './Components/Footer';
+import GetStarted from './Components/GetStarted';
+import MainPage from './Components/MainPage';
+import Navbar from './Components/Navbar';
+import Pricing from './Components/Pricing';
+import { Routes, Route } from "react-router-dom"
+import Page404 from "./Components/Page404"
+import MainContext from './MainContext';
+import { useState } from 'react';
+import Login from './Components/Login';
 function App() {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const data = {
+    modalIsOpen,setModalIsOpen
+  }
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContext.Provider value={data}>
+      <div className="App" >
+        <Navbar />
+        <Login/>
+        <Routes>
+          <Route path="/" exact element={<MainPage />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+        
+        <Footer />
+
+      </div>
+    </MainContext.Provider>
   );
 }
 
