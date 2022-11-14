@@ -1,3 +1,4 @@
+import React , { useState } from 'react';
 import './App.css';
 import Footer from './Components/Footer';
 import GetStarted from './Components/GetStarted';
@@ -7,7 +8,6 @@ import Pricing from './Components/Pricing';
 import { Routes, Route } from "react-router-dom"
 import Page404 from "./Components/Page404"
 import MainContext from './MainContext';
-import { useState } from 'react';
 import Login from './Components/Login';
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
