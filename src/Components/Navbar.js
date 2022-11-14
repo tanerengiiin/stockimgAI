@@ -148,7 +148,7 @@ const Navbar = () => {
                                 </motion.li>
                                 <motion.li variants={itemVariants}>
                                     <div className='navbar__right--getStarted'>
-                                        <Button variant="contained" fullWidth>Get Started</Button>
+                                        <Button variant="contained" fullWidth onClick={()=>setModalIsOpen(true)}>Get Started</Button>
                                     </div>
                                 </motion.li>
                                 <motion.li variants={itemVariants}><NavLink to={"/pricing"} onClick={() => setIsOpen(false)}><div>Pricing</div></NavLink></motion.li>
