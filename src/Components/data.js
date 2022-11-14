@@ -169,3 +169,7 @@ export const socialURL={
     "instagram":"https://www.instagram.com",
     "tiktok":"https://www.tiktok.com/tr-TR/"
 };
+
+
+export const discordURL="https://discord.com";
+export const mail="mailto:webmaster@example.com";

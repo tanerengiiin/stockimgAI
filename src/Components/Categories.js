@@ -9,53 +9,72 @@ import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import PanoramaHorizontalSelectRoundedIcon from '@mui/icons-material/PanoramaHorizontalSelectRounded';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import CenterFocusStrongRoundedIcon from '@mui/icons-material/CenterFocusStrongRounded';
+import { Badge } from '@mui/material';
 const Categories = () => {
     return (
         <div className='categories'>
             <div className='category'>
+
                 <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(200deg, rgba(113,197,238,1) 0%, rgba(2,80,145,1) 100%)" }}>
-                        <StarRoundedIcon fontSize="inherit" />
-                    </IconButton>
-                    <div>Stock Image</div>
-                </div>
-                <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: " linear-gradient(203deg, rgba(243,99,100,1) 0%, rgba(242,146,237,1) 100%)" }}>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(203deg, rgba(18,179,235,1) 0%, rgba(84,96,249,1) 100%)" }}>
+
                         <ImportContactsRoundedIcon fontSize="inherit" />
                     </IconButton>
                     <div>Book Cover</div>
                 </div>
                 <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(203deg, rgba(18,179,235,1) 0%, rgba(84,96,249,1) 100%)" }}>
-                        <CenterFocusStrongRoundedIcon fontSize="inherit" />
-                    </IconButton>
-                    <div>Logo</div>
-                </div>
-                <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: " linear-gradient(203deg, rgba(135,82,163,1) 0%, rgba(98,116,231,1) 100%)" }}>
-                        <AutoAwesomeRoundedIcon fontSize="inherit" />
-                    </IconButton>
-                    <div>Illustration</div>
-                </div>
-                <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(203deg, rgba(234,84,89,1) 0%, rgba(247,186,44,1) 100%)" }}>
-                        <PanoramaHorizontalSelectRoundedIcon fontSize="inherit" />
-                    </IconButton>
-                    <div>Poster</div>
-                </div>
-                <div className='category__icon'>
-                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(203deg, rgba(141,233,213,1) 0%, rgba(50,196,192,1) 100%)" }}>
-                        <DashboardRoundedIcon fontSize="inherit" />
-                    </IconButton>
-                    <div>Web & Mobile UI</div>
-                </div>
-                <div className='category__icon'>
                     <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(203deg, rgba(255,147,15,1) 0%, rgba(255,249,91,1) 100%)" }}>
                         <InsertPhotoRoundedIcon fontSize="inherit" />
                     </IconButton>
-                    <div>Wallpaper</div>
+                    <div >Wallpaper</div>
                 </div>
-                
+                <div className='category__icon'>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(to right, #868f96 0%, #596164 100%)" }}>
+                        <Badge color="secondary" badgeContent={"SOON"}>
+                            <CenterFocusStrongRoundedIcon fontSize="inherit" />
+                        </Badge>
+
+                    </IconButton>
+                    <div style={{ color: "#CCCCCC" }}>Logo</div>
+                </div>
+                <div className='category__icon'>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(to right, #868f96 0%, #596164 100%)" }}>
+
+                        <Badge color="secondary" badgeContent={"SOON"}>
+                            <AutoAwesomeRoundedIcon fontSize="inherit" />
+                        </Badge>
+
+                    </IconButton>
+                    <div style={{ color: "#CCCCCC" }}>Illustration</div>
+                </div>
+                <div className='category__icon'>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(to right, #868f96 0%, #596164 100%)" }}>
+
+                        <Badge color="secondary" badgeContent={"SOON"}>
+                            <PanoramaHorizontalSelectRoundedIcon fontSize="inherit" />
+                        </Badge>
+                    </IconButton>
+                    <div style={{ color: "#CCCCCC" }}>Poster</div>
+                </div>
+                <div className='category__icon'>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(to right, #868f96 0%, #596164 100%)" }}>
+
+                        <Badge color="secondary" badgeContent={"SOON"}>
+                            <DashboardRoundedIcon fontSize="inherit" />
+                        </Badge>
+                    </IconButton>
+                    <div style={{ color: "#CCCCCC" }}>Web & Mobile UI</div>
+                </div>
+                <div className='category__icon '>
+                    <IconButton aria-label="delete" size="large" style={{ background: "linear-gradient(to right, #868f96 0%, #596164 100%)" }}>
+                        <Badge color="secondary" badgeContent={"SOON"}>
+                            <StarRoundedIcon fontSize="inherit" />
+                        </Badge>
+                    </IconButton>
+                    <div style={{ color: "#CCCCCC" }}>Stock Image</div>
+                </div>
+
+
 
             </div>
         </div>

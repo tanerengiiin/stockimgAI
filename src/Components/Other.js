@@ -74,16 +74,17 @@ export const Other = () => {
                                     paginate(-1);
                                 }
                             }}
+                            alt={projects[imageIndex].project_name}
                         />
                     </AnimatePresence>
                     <div className="next" onClick={() => paginate(1)}>
-                        <IconButton>
+                        <IconButton aria-label="image right button">
                             <KeyboardArrowRightRoundedIcon />
                         </IconButton>
                     </div>
                     <div className="prev" onClick={() => paginate(-1)}>
                     <IconButton>
-                            <KeyboardArrowLeftRoundedIcon />
+                            <KeyboardArrowLeftRoundedIcon aria-label="image left button" />
                         </IconButton>
                     </div>
                 </div>

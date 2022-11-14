@@ -8,9 +8,10 @@ import useWindowDimensions from './useWindowDimensions';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { NavLink } from 'react-router-dom';
-import { IconButton } from '@mui/material';
+import { IconButton, Link } from '@mui/material';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import MainContext from '../MainContext';
+import { discordURL } from './data';
 const itemVariants = {
     open: {
         opacity: 1,
@@ -21,7 +22,7 @@ const itemVariants = {
 };
 
 const Navbar = () => {
-    const {modalIsOpen,setModalIsOpen}=useContext(MainContext);
+    const { modalIsOpen, setModalIsOpen } = useContext(MainContext);
 
     const [isOpen, setIsOpen] = useState(false);
     const [categoryOpen, isCategoryOpen] = useState(false);
@@ -48,7 +49,7 @@ const Navbar = () => {
                                             menuRef.current.classList.add("menu__active");
                                         }, 500);
                                     }} onMouseLeave={() => { isCategoryOpen(false); menuRef.current.classList.remove("menu__active"); }}>
-                                        Categories<KeyboardArrowDownRoundedIcon fontSize='medium'/>
+                                        Categories<KeyboardArrowDownRoundedIcon fontSize='medium' />
                                         <motion.nav
                                             initial={false}
                                             animate={categoryOpen ? "open" : "closed"}
@@ -92,7 +93,10 @@ const Navbar = () => {
                                         </motion.nav>
                                     </li>
                                     <li>
-                                        Discord<ArrowOutwardOutlinedIcon fontSize='small' />
+                                        <Link target="_blank" href={discordURL} underline="none" color={"inherit"} style={{display:"flex",alignItems:"center"}}>
+                                            Discord<ArrowOutwardOutlinedIcon fontSize='small' />
+                                        </Link>
+
                                     </li>
                                 </ul>
                             </div>
@@ -100,7 +104,7 @@ const Navbar = () => {
                         <div className='navbar__right'>
 
                             <div className='navbar__right--getStarted'>
-                                <Button variant="contained" onClick={()=>setModalIsOpen(true)} >Get Started</Button>
+                                <Button aria-label="get started" variant="contained" onClick={() => setModalIsOpen(true)} >Get Started</Button>
                             </div>
                         </div>
                     </div> :
@@ -110,7 +114,7 @@ const Navbar = () => {
                             setIsOpen(!isOpen); setTimeout(() => {
                                 menuRef.current.classList.add("menu__active");
                             }, 300);
-                        }} onMouseLeave={() => { isCategoryOpen(false); menuRef.current.classList.remove("menu__active"); }}><MenuRoundedIcon /></IconButton>
+                        }} onMouseLeave={() => { isCategoryOpen(false); menuRef.current.classList.remove("menu__active"); }} aria-label="hamburger menu"><MenuRoundedIcon /></IconButton>
                         <motion.nav
                             initial={false}
                             animate={isOpen ? "open" : "closed"}
@@ -144,11 +148,11 @@ const Navbar = () => {
                             >
                                 <motion.li variants={itemVariants}>
                                     <NavLink to={"/"} onClick={() => setIsOpen(false)}><motion.div className='navbar__left--logo'>STOCKIMG.AI</motion.div></NavLink>
-                                    <IconButton className='navbar__hamburger' onClick={() => setIsOpen(!isOpen)}><CloseRoundedIcon /></IconButton>
+                                    <IconButton className='navbar__hamburger' onClick={() => setIsOpen(!isOpen)} aria-label="hamburger close"><CloseRoundedIcon /></IconButton>
                                 </motion.li>
                                 <motion.li variants={itemVariants}>
                                     <div className='navbar__right--getStarted'>
-                                        <Button variant="contained" fullWidth onClick={()=>setModalIsOpen(true)}>Get Started</Button>
+                                        <Button aria-label="get started" variant="contained" fullWidth onClick={() => setModalIsOpen(true)}>Get Started</Button>
                                     </div>
                                 </motion.li>
                                 <motion.li variants={itemVariants}><NavLink to={"/pricing"} onClick={() => setIsOpen(false)}><div>Pricing</div></NavLink></motion.li>
@@ -190,7 +194,11 @@ const Navbar = () => {
                                         </motion.ul>
                                     </motion.nav>
                                 </motion.li>
-                                <motion.li variants={itemVariants} >Discord<ArrowOutwardOutlinedIcon fontSize='small' /></motion.li>
+                                <motion.li variants={itemVariants} >
+                                    <Link target="_blank" href={discordURL} underline="none" color={"#08080F"} style={{display:"flex",alignItems:"center"}}>
+                                        Discord<ArrowOutwardOutlinedIcon fontSize='small' />
+                                    </Link>
+                                </motion.li>
                             </motion.ul>
                         </motion.nav>
 

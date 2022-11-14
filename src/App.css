@@ -1,4 +1,19 @@
-
+.soon{
+  background-color: rgb(249, 41, 55);
+  border-radius: 10px;
+  margin: -4px 0;
+  font-size: 12px;
+  font-weight: 600;
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  padding: 2px 9px;
+  text-align: center;
+  transform: rotate(-45deg);
+}
+.category__icon .MuiBadge-badge{
+  background: linear-gradient(to right, #eb3349, #f45c43);
+}
 html{
   font-size: 16px;
 }
@@ -242,6 +257,13 @@ html{
   text-align: center;
   color: #4E4E54;
   padding-bottom: 2rem;
+}
+.pricing__faq h4 a{
+  font-weight: 500;
+}
+.pricing__faq h4 a:hover{
+  color: #45A0EF;
+  text-decoration: underline;
 }
 .question{
   padding: 1rem 0px;
@@ -726,11 +748,15 @@ html{
 .image{
   cursor: pointer;
   position: relative;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
-.image:hover .image__detail{
-  display: flex;
-  transition: all 0.2s ease-in-out;
-}
+
 .image__detail{
   display: none;
   position: absolute;
@@ -757,7 +783,7 @@ html{
 .category{
   display: flex;
   align-items: flex-start;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 .category::-webkit-scrollbar{
   display: none;
@@ -776,6 +802,7 @@ html{
   flex-direction: column;
   color: white;
   margin: 0 20px;
+  position: relative;
 }
 .category__icon div{
   margin-top: 8px;
@@ -847,6 +874,7 @@ html{
   font-size: 1.5rem;
   color: #232325;
 }
+
 .project__detail{
   width: 40%;
   margin-left: 1rem;
@@ -860,6 +888,7 @@ html{
 }
 .project__detail a{
   color: #45A0EF;
+  font-weight: 600;
 }
 .project__detail a:hover{
   text-decoration: underline;

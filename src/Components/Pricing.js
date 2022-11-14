@@ -3,7 +3,7 @@ import '../App.css';
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import PricingPlan from './PricingPlan';
 import Question from './Question';
-import {pricingPlans} from "./data"
+import {discordURL, mail, pricingPlans} from "./data"
 import {questions} from "./data"
 
 const Pricing = () => {
@@ -31,7 +31,7 @@ const Pricing = () => {
                 </div>
                 <div className='pricing__faq'>
                     <h1>Frequently Asked Questions</h1>
-                    <h4>Have questions? Reach via Discord or mail.</h4>
+                    <h4>Have questions? Reach via <a target={"_blank"} href={discordURL}>Discord</a> or <a href={mail}>mail</a>.</h4>
                     <AnimateSharedLayout>
                         <motion.ul layout className='pricing__faq--questions'>
                             {
