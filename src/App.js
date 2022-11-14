@@ -22,8 +22,8 @@ function App() {
         <Navbar />
         <Login/>
         <Routes>
-          <Route path="/stockimgAI/" exact element={<MainPage />} />
-          <Route path="/stockimgAI/pricing" element={<Pricing />} />
+          <Route path="/" exact element={<MainPage />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         
