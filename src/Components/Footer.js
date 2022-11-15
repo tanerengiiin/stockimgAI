@@ -5,7 +5,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import IconButton from '@mui/material/IconButton';
 import ArrowOutwardOutlinedIcon from '@mui/icons-material/ArrowOutwardOutlined';
 import { Link } from '@mui/material';
-import {socialURL} from "./data"
+import { business, mail, socialURL } from "./data"
 
 const Footer = () => {
     return (
@@ -20,23 +20,23 @@ const Footer = () => {
                     <ul>
                         <li>
                             <Link target="_blank" href={socialURL?.twitter}>
-                            <IconButton aria-label="link to twitter" size="large">
-                                <TwitterIcon />
-                            </IconButton>
+                                <IconButton aria-label="link to twitter" size="large">
+                                    <TwitterIcon />
+                                </IconButton>
                             </Link>
                         </li>
                         <li>
                             <Link target="_blank" href={socialURL?.instagram}>
-                            <IconButton aria-label="link to instagram" size="large">
-                                <InstagramIcon />
-                            </IconButton>
+                                <IconButton aria-label="link to instagram" size="large">
+                                    <InstagramIcon />
+                                </IconButton>
                             </Link>
                         </li>
                         <li>
                             <Link target="_blank" href={socialURL?.tiktok} underline="none">
-                            <IconButton aria-label="link to youtube" size="large" >
-                            <i className="fa-brands fa-tiktok"></i>
-                            </IconButton>
+                                <IconButton aria-label="link to youtube" size="large" >
+                                    <i className="fa-brands fa-tiktok"></i>
+                                </IconButton>
                             </Link>
                         </li>
                     </ul>
@@ -44,13 +44,19 @@ const Footer = () => {
                 <div className='footer__detail--links'>
                     <ul>
                         <li>
-                            Contact Us<ArrowOutwardOutlinedIcon fontSize='small' />
+                            <Link target="_blank" href={mail} color="inherit">
+                                Contact Us<ArrowOutwardOutlinedIcon fontSize='small' />
+                            </Link>
                         </li>
                         <li>
-                            Privacy Policy<ArrowOutwardOutlinedIcon fontSize='small' />
+                            <Link target="_blank" href={business.privacyPolicy} color="inherit">
+                                Privacy Policy<ArrowOutwardOutlinedIcon fontSize='small' />
+                            </Link>
                         </li>
                         <li>
-                            Terms of Service<ArrowOutwardOutlinedIcon fontSize='small' />
+                            <Link target="_blank" href={business.termsOfService} color="inherit">
+                                Terms of Service<ArrowOutwardOutlinedIcon fontSize='small' />
+                            </Link>
                         </li>
                     </ul>
                 </div>

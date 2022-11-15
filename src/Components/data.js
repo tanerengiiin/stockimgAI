@@ -173,3 +173,7 @@ export const socialURL={
 
 export const discordURL="https://discord.com";
 export const mail="mailto:webmaster@example.com";
+export const business={
+    "privacyPolicy":"link",
+    "termsOfService":"link"
+}

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Button, IconButton } from '@mui/material';
 import google from "./google.png";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import { business } from './data';
 Modal.setAppElement('#root');
 const Login = () => {
   const { modalIsOpen, setModalIsOpen } = useContext(MainContext);
@@ -47,7 +48,7 @@ const Login = () => {
             </Button>
           </form>
           <div className='login__modal--footer'>
-            By continuing, you agree to Stockimg.ai's <a href='#'>Terms of Use</a>. Read our <a href='#'>Privacy Policy</a>.
+            By continuing, you agree to Stockimg.ai's <a href={business.termsOfService}>Terms of Use</a>. Read our <a href={business.privacyPolicy}>Privacy Policy</a>.
           </div>
         </motion.div>
 
